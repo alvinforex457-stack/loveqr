@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Patrick+Hand&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Create Gift — Scan2Gift</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  /* Fix layout overlapping and sticky behavior */
+  #giftForm.builder {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+  
+  /* Force preview panel to stay at the bottom and scroll normally with the page */
+  #giftForm > .preview-panel {
+    position: relative !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    grid-column: unset !important;
+    width: 100% !important;
+    margin-top: 0 !important;
+    z-index: 1 !important;
+  }
+
+  .live-preview {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+<header class="nav">
+<a class="brand" href="index.html">🎁 Scan2Gift</a>
+<div><a href="templates.html">Templates</a> · <a href="dashboard.html">Dashboard</a></div>
+</header>
+<main class="builder-wrap">
+<div class="builder-head">
+<div><span class="eyebrow">CREATE A DIGITAL GIFT</span><h1>Make something unforgettable.</h1></div>
+<div class="stepper"><b>1</b><span></span><b>2</b><span></span><b>3</b></div>
+</div>
+<form id="giftForm" class="builder">
+<section class="panel">
+<h2>1. Choose an occasion</h2>
+<div class="choice-grid">
+<label><input name="occasion" value="Birthday" type="radio" checked><span>🎂<b>Birthday</b></span></label>
+<label><input name="occasion" value="Anniversary" type="radio"><span>💍<b>Anniversary</b></span></label>
+<label><input name="occasion" value="Love" type="radio"><span>❤️<b>Love</b></span></label>
+<label><input name="occasion" value="Congratulations" type="radio"><span>🎉<b>Congratulations</b></span></label>
+<label><input name="occasion" value="Graduation" type="radio"><span>🎓<b>Graduation</b></span></label>
+<label><input name="occasion" value="Custom" type="radio"><span>✨<b>Custom</b></span></label>
+</div>
+</section>
+
+<section class="panel">
+<h2>2. Personalize it</h2>
+<div class="form-grid">
+<label>Recipient name<input id="recipient" name="recipient" required placeholder="Sarah"></label>
+<label>Your name<input id="sender" name="sender" required placeholder="Viyanga"></label>
+<label class="full">Gift title<input id="title" name="title" required placeholder="Happy Birthday ❤️"></label>
+<label class="full">Personal message<textarea id="message" name="message" rows="5" required placeholder="Wishing you a beautiful birthday..."></textarea></label>
+<label>Event date<input name="event_date" type="date"></label>
+<label>Template<select name="theme"><option value="romantic">Romantic</option><option value="birthday">Birthday</option><option value="elegant">Elegant</option><option value="minimal">Minimal</option><option value="celebration">Celebration</option></select></label>
+<label>Animation<select name="animation"><option value="hearts">Falling hearts ❤️</option><option value="confetti">Confetti 🎉</option><option value="sparkles">Sparkles ✨</option><option value="balloons">Balloons 🎈</option><option value="none">None</option></select></label>
+<label>Private PIN<input name="pin" inputmode="numeric" maxlength="8" placeholder="Optional"></label>
+<label class="full">Photo URL <small>For direct browser upload, configure Cloudinary in config.js. This URL field works immediately.</small><input name="photo_url" type="url" placeholder="https://..."></label>
+<label class="full">Video URL<input name="video_url" type="url" placeholder="https://www.youtube.com/watch?v=..."></label>
+<label class="full">Background music URL <small>Only use audio you have permission to distribute.</small><input name="music_url" type="url" placeholder="https://...mp3"></label>
+</div>
+</section>
+
+<section class="panel preview-panel">
+<h2>3. Preview</h2>
+<div id="livePreview" class="live-preview">
+<div class="preview-photo">❤️</div>
+<span class="eyebrow">FOR</span>
+<h2 id="pvRecipient">Someone special</h2>
+<h3 id="pvTitle">Your beautiful gift</h3>
+<p id="pvMessage">Your message will appear here.</p>
+<small id="pvFrom">From you ❤️</small>
+</div>
+</section>
+
+<div class="form-actions">
+<a class="btn btn-light" href="index.html">Cancel</a>
+<button class="btn btn-primary" type="submit">✨ Create My Gift</button>
+</div>
+<div id="formStatus" class="status"></div>
+</form>
+</main>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/create.js"></script>
+</body>
+</html>
