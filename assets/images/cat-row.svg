@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 170">
+<defs><filter id="s"><feDropShadow dx="0" dy="7" stdDeviation="5" flood-opacity=".12"/></filter></defs>
+<g filter="url(#s)" stroke="#3d3440" stroke-width="2" stroke-linejoin="round">
+<g transform="translate(30 30)"><path fill="#9bdcf0" d="M20 110V35L48 10l25 25 35-25 18 25v75z"/><circle cx="57" cy="66" r="3"/><circle cx="91" cy="66" r="3"/><path d="M70 75q7 8 14 0"/></g>
+<g transform="translate(155 48)"><path fill="#f7aebf" d="M15 100V35L45 12l20 23 30-23 18 23v65z"/><circle cx="57" cy="65" r="3"/><circle cx="85" cy="65" r="3"/><path d="M65 75q7 8 14 0"/></g>
+<g transform="translate(275 25)"><path fill="#f6db73" d="M20 115V35L45 8l25 27 33-27 18 27v80z"/><circle cx="58" cy="68" r="3"/><circle cx="88" cy="68" r="3"/><path d="M68 78q7 8 14 0"/></g>
+<g transform="translate(405 32)"><path fill="#9bdcf0" d="M20 110V35L48 10l25 25 35-25 18 25v75z"/><circle cx="57" cy="66" r="3"/><circle cx="91" cy="66" r="3"/><path d="M70 75q7 8 14 0"/></g>
+<g transform="translate(535 42)"><path fill="#f7aebf" d="M15 100V35L45 12l20 23 30-23 18 23v65z"/><circle cx="57" cy="65" r="3"/><circle cx="85" cy="65" r="3"/><path d="M65 75q7 8 14 0"/></g>
+<g transform="translate(650 28)"><path fill="#f6db73" d="M20 112V35L45 8l25 27 33-27 18 27v77z"/><circle cx="58" cy="68" r="3"/><circle cx="88" cy="68" r="3"/><path d="M68 78q7 8 14 0"/></g>
+<g transform="translate(770 42)"><path fill="#9bdcf0" d="M15 100V35L45 12l20 23 30-23 18 23v65z"/><circle cx="57" cy="65" r="3"/><circle cx="85" cy="65" r="3"/><path d="M65 75q7 8 14 0"/></g>
+</g><text x="125" y="28" font-size="22" fill="#f28d9c">♥</text><text x="470" y="25" font-size="20" fill="#f28d9c">♥</text><text x="735" y="30" font-size="22" fill="#f28d9c">♥</text>
+</svg>

@@ -1,0 +1,5 @@
+document.addEventListener("DOMContentLoaded",()=>{
+ const login=document.getElementById("loginForm"), reg=document.getElementById("registerForm");
+ if(login) login.onsubmit=async e=>{e.preventDefault();const m=document.getElementById("msg");try{m.textContent="Signing in…";const r=await S2G.api("login",{email:email.value,password:password.value});S2G.setSession(r.session);location.href=new URLSearchParams(location.search).get("next")||"dashboard.html"}catch(x){m.className="status error";m.textContent=x.message}};
+ if(reg) reg.onsubmit=async e=>{e.preventDefault();const m=document.getElementById("msg");try{m.textContent="Creating account…";const r=await S2G.api("register",{name:name.value,email:email.value,password:password.value});S2G.setSession(r.session);location.href="dashboard.html"}catch(x){m.className="status error";m.textContent=x.message}};
+});
